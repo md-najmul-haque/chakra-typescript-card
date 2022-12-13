@@ -23,12 +23,17 @@ const CardDetails = ({ data }: AllDataType) => {
     console.log(deadline)
     return (
         <Text mx='auto'>
-            <Card maxW='md'>
+            <Card maxW='md' bg={'#0b2236'}>
                 <CardHeader>
                     <Flex>
-                        <Text size='sm'>{deal}</Text>
+                        <Button bg='#141b2f' color='white' size='sm'>
+                            {deal}
+                        </Button>
+                        <Text size='sm'></Text>
                         <Spacer />
-                        <Text>{action}</Text>
+                        <Button bg='#141b2f' color='white' size='sm' border='2px solid red'>
+                            {action}
+                        </Button>
                     </Flex>
                 </CardHeader>
                 <Image
@@ -39,7 +44,7 @@ const CardDetails = ({ data }: AllDataType) => {
                 />
                 <CardBody>
                     <Flex>
-                        <Text>
+                        <Text fontSize={14}>
                             {batchNo}<br />
                             {title}
                         </Text>
@@ -64,7 +69,7 @@ const CardDetails = ({ data }: AllDataType) => {
                         </Text>
                     </Flex>
                 </CardBody>
-                <WrapItem px={5}>
+                <WrapItem px={5} mb={10}>
                     <Button colorScheme='messenger' py={7} w={"100%"}>Messenger</Button>
                 </WrapItem>
 

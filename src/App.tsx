@@ -8,7 +8,7 @@ import Card from './components/Card';
 function App() {
   return (
     <div className="App">
-      <Heading>Chakra Typescript card</Heading>
+      <Heading color='white' pt='10'>Chakra Typescript card</Heading>
       <Card />
     </div>
   );
