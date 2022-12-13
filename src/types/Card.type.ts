@@ -7,8 +7,9 @@ export type DataType = {
     action: string,
     reaction: number,
     heightBid?: number,
-    offer?: string
-    price?: number
+    offer?: string,
+    earlierPrice?: number,
+    offerPrice?: number,
     deadline: string
 }
 export type AllDataType = {
@@ -22,7 +23,8 @@ export type AllDataType = {
         reaction: number,
         heightBid?: number,
         offer?: string
-        price?: number
+        earlierPrice?: number,
+        offerPrice?: number,
         deadline: string
     }
 }

@@ -6,6 +6,7 @@ import { DataType } from "../types/Card.type";
 
 
 
+
 const Card = () => {
 
     const { isLoading, error, data } = useQuery({

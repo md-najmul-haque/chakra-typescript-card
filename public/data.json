@@ -30,7 +30,8 @@
         "action": "Sale",
         "reaction": 92,
         "offer": "10% off",
-        "price": 260,
+        "earlierPrice": "300",
+        "offerPrice": 260,
         "deadline": "20-12-22"
     }
 ]

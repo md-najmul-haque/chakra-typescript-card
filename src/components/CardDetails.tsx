@@ -6,7 +6,7 @@ import { useState } from "react";
 const CardDetails = ({ data }: AllDataType) => {
     const [like, setLike] = useState(false)
 
-    let { id, title, batchNo, img, deal, action, reaction, heightBid, offer, price, deadline } = data
+    let { id, title, batchNo, img, deal, action, reaction, heightBid, offer, earlierPrice, offerPrice, deadline } = data
 
     const handleReaction = () => {
         if (like) {
@@ -62,7 +62,9 @@ const CardDetails = ({ data }: AllDataType) => {
                     <Flex mt={5} alignItems='center'>
                         <Text>
                             {
-                                heightBid ? <Text align='left' py='3' px='5' border='1px solid #20486d'>HEIGHT BID<br />${heightBid}</Text> : <Text>{offer}</Text>
+                                heightBid ?
+                                    <Text align='left' py='3' px='5' border='1px solid #20486d'>HEIGHT BID<br />${heightBid}</Text> :
+                                    <Text align='left' py='3' px='5' border='1px solid #20486d'><Text pr={10} color='red'>${earlierPrice}</Text><Text>${offerPrice}</Text></Text>
                             }
                         </Text>
                         <Spacer />
