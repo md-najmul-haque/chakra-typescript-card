@@ -23,7 +23,7 @@ const CardDetails = ({ data }: AllDataType) => {
     console.log(deadline)
     return (
         <Text mx='auto'>
-            <Card maxW='md' bg={'#0b2236'}>
+            <Card maxW='md' bg={'#0b2236'} color='white' fontSize={16} fontWeight='semibold'>
                 <CardHeader>
                     <Flex>
                         <Button bg='#141b2f' color='white' size='sm'>
@@ -44,14 +44,14 @@ const CardDetails = ({ data }: AllDataType) => {
                 />
                 <CardBody>
                     <Flex>
-                        <Text fontSize={14}>
+                        <Text>
                             {batchNo}<br />
-                            {title}
+                            <Text color='#20486d'>{title}</Text>
                         </Text>
                         <Spacer />
                         <Flex alignItems='center' gap='2'>
-                            <Text onClick={handleReaction}>
-                                {like ? <BsHeartFill /> : <BsHeart />}
+                            <Text onClick={() => { setLike(!like) }}>
+                                {like ? <Text color='red'><BsHeartFill /> </Text> : <BsHeart />}
                             </Text>
                             <Text>
                                 {reaction}
@@ -59,7 +59,7 @@ const CardDetails = ({ data }: AllDataType) => {
                         </Flex>
                     </Flex>
 
-                    <Flex>
+                    <Flex mt={5}>
                         <Text>
                             {heightBid}
                         </Text>
@@ -70,7 +70,19 @@ const CardDetails = ({ data }: AllDataType) => {
                     </Flex>
                 </CardBody>
                 <WrapItem px={5} mb={10}>
-                    <Button colorScheme='messenger' py={7} w={"100%"}>Messenger</Button>
+                    <Text colorScheme='messenger' py={7} w={"100%"}>
+                        {action === "Action" ? <Button colorScheme='messenger' py={7} w={"100%"}>
+                            BID NOW
+                        </Button> : <Flex>
+                            <Button colorScheme='messenger' variant='outline' px={10} border='1px solid' py={7}>
+                                ADD TO CARD
+                            </Button>
+                            <Spacer />
+                            <Button colorScheme='messenger' px={12} ml={5} py={7}>
+                                BUY NOW
+                            </Button>
+                        </Flex>}
+                    </Text>
                 </WrapItem>
 
             </Card>
