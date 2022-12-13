@@ -1,6 +1,7 @@
 import { Grid, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import CardDetails from "./CardDetails";
+import Loading from "./Loading";
 // import { DataType } from "../types/Card.type";
 
 type DataType = {
@@ -30,7 +31,9 @@ const Card = () => {
 
     console.log(data)
 
-    // if (isLoading) return 'Loading...'
+    if (isLoading) {
+        <Loading />
+    }
 
 
     return (
