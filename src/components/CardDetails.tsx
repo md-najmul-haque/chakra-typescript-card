@@ -1,6 +1,6 @@
-import React from 'react';
+import { AllDataType } from "../types/Card.type";
 
-const CardDetails = () => {
+const CardDetails = ({ data }: AllDataType) => {
     return (
         <div>
 
