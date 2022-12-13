@@ -59,14 +59,15 @@ const CardDetails = ({ data }: AllDataType) => {
                         </Flex>
                     </Flex>
 
-                    <Flex mt={5}>
+                    <Flex mt={5} alignItems='center'>
                         <Text>
-                            {heightBid}
+                            {
+                                heightBid ? <Text align='left' py='3' px='5' border='1px solid #20486d'>HEIGHT BID<br />${heightBid}</Text> : <Text>{offer}</Text>
+                            }
                         </Text>
                         <Spacer />
-                        <Text>
-                            {deadline}
-                        </Text>
+                        <Text align='left' p='3' border='1px solid #20486d'>ACTION END IN<br />{deadline}</Text>
+
                     </Flex>
                 </CardBody>
                 <WrapItem px={5} mb={10}>
