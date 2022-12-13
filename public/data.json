@@ -3,34 +3,34 @@
         "id": 1,
         "title": "Enoch Citizen",
         "batchNo": "#B8/457843",
-        "img": "",
+        "img": "https://i.ibb.co/ynfkbyS/Screenshot-from-2022-12-13-15-54-34.png",
         "deal": "Hot Deal",
         "action": "Action",
         "reaction": 92,
         "heightBid": 260,
-        "deadline": ""
+        "deadline": "20-12-22"
     },
     {
         "id": 2,
         "title": "Enoch Citizen",
         "batchNo": "#B8/457843",
-        "img": "",
+        "img": "https://i.ibb.co/SnBVfbk/Screenshot-from-2022-12-13-15-55-10.png",
         "deal": "Hot Deal",
         "action": "Action",
         "reaction": 32,
         "heightBid": 260,
-        "deadline": ""
+        "deadline": "20-12-22"
     },
     {
         "id": 3,
         "title": "Enoch Citizen",
         "batchNo": "#B8/457843",
-        "img": "",
+        "img": "https://i.ibb.co/9rkbFnB/Screenshot-from-2022-12-13-15-55-24.png",
         "deal": "Hot Deal",
         "action": "Sale",
         "reaction": 92,
         "offer": "10% off",
         "price": 260,
-        "deadline": ""
+        "deadline": "20-12-22"
     }
 ]
