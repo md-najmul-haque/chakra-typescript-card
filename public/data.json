@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "title": "Enoch Citizen",
+        "batch-no": "#B8/457843",
+        "img": "",
+        "deal": "Hot Deal",
+        "action": "Action",
+        "reaction": 92,
+        "height-bid": 260,
+        "deadline": ""
+    },
+    {
+        "id": 2,
+        "title": "Enoch Citizen",
+        "batch-no": "#B8/457843",
+        "img": "",
+        "deal": "Hot Deal",
+        "action": "Action",
+        "reaction": 32,
+        "height-bid": 260,
+        "deadline": ""
+    },
+    {
+        "id": 3,
+        "title": "Enoch Citizen",
+        "batch-no": "#B8/457843",
+        "img": "",
+        "deal": "Hot Deal",
+        "action": "Sale",
+        "reaction": 92,
+        "offer": "10% off",
+        "price": 260,
+        "deadline": ""
+    }
+]
