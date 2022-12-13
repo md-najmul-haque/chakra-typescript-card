@@ -2,21 +2,8 @@ import { Grid, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import CardDetails from "./CardDetails";
 import Loading from "./Loading";
-// import { DataType } from "../types/Card.type";
+import { DataType } from "../types/Card.type";
 
-type DataType = {
-    id: number,
-    title: string,
-    batchNo: string,
-    img: string,
-    deal: string,
-    action: string,
-    reaction: string,
-    heightBid?: number,
-    offer?: string
-    price?: number
-    deadline: string
-}
 
 
 const Card = () => {

@@ -6,7 +6,20 @@ import { useState } from "react";
 const CardDetails = ({ data }: AllDataType) => {
     const [like, setLike] = useState(false)
 
-    const { id, title, batchNo, img, deal, action, reaction, heightBid, offer, price, deadline } = data
+    let { id, title, batchNo, img, deal, action, reaction, heightBid, offer, price, deadline } = data
+
+    const handleReaction = () => {
+        if (like) {
+            setLike(false)
+            reaction = reaction - 1
+
+        } else {
+            setLike(true)
+
+            reaction = reaction + 1
+        }
+    }
+
     console.log(deadline)
     return (
         <Text mx='auto'>
@@ -32,7 +45,7 @@ const CardDetails = ({ data }: AllDataType) => {
                         </Text>
                         <Spacer />
                         <Flex alignItems='center' gap='2'>
-                            <Text onClick={() => { setLike(!like) }}>
+                            <Text onClick={handleReaction}>
                                 {like ? <BsHeartFill /> : <BsHeart />}
                             </Text>
                             <Text>

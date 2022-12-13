@@ -5,7 +5,7 @@ export type DataType = {
     img: string,
     deal: string,
     action: string,
-    reaction: string,
+    reaction: number,
     heightBid?: number,
     offer?: string
     price?: number
@@ -19,7 +19,7 @@ export type AllDataType = {
         img: string,
         deal: string,
         action: string,
-        reaction: string,
+        reaction: number,
         heightBid?: number,
         offer?: string
         price?: number
