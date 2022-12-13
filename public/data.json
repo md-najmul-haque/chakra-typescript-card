@@ -8,7 +8,7 @@
         "action": "Action",
         "reaction": 92,
         "heightBid": 260,
-        "deadline": "20-12-22"
+        "actionDeadline": "20-12-22"
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "action": "Action",
         "reaction": 32,
         "heightBid": 260,
-        "deadline": "20-12-22"
+        "actionDeadline": "20-12-22"
     },
     {
         "id": 3,
@@ -32,6 +32,6 @@
         "offer": "10% off",
         "earlierPrice": "300",
         "offerPrice": 260,
-        "deadline": "20-12-22"
+        "saleDeadline": "20-12-22"
     }
 ]
