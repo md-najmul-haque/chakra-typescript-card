@@ -79,8 +79,8 @@ const CardDetails = ({ data }: AllDataType) => {
 
                     </Flex>
                 </CardBody>
-                <WrapItem px={5} mb={10}>
-                    <Text colorScheme='messenger' py={7} w={"100%"}>
+                <WrapItem px={5} mb={5}>
+                    <Text colorScheme='messenger' py={3} w={"100%"}>
                         {action === "Action" ? <Button colorScheme='messenger' py={7} w={"100%"}>
                             BID NOW
                         </Button> : <Flex>
