@@ -1,4 +1,4 @@
-import { Grid, Text } from "@chakra-ui/react";
+import { Grid, SimpleGrid, Text } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import CardDetails from "./CardDetails";
 import Loading from "./Loading";
@@ -26,11 +26,11 @@ const Card = () => {
 
     return (
         <Text mx='auto' mt={10}>
-            <Grid templateColumns='repeat(3, 1fr)' gap={6} >
+            <SimpleGrid minChildWidth="375px" gap={6} >
                 {
                     data?.map((data: DataType) => <CardDetails key={data.id} data={data} />)
                 }
-            </Grid>
+            </SimpleGrid>
         </Text>
     );
 };
