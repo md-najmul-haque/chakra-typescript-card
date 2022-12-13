@@ -1,5 +1,5 @@
 import { AllDataType } from "../types/Card.type";
-import { Card, CardHeader, CardBody, CardFooter, Flex, Avatar, Box, Heading, Text, IconButton, Image, Button, Spacer, WrapItem } from '@chakra-ui/react'
+import { Card, CardHeader, CardBody, CardFooter, Flex, Avatar, Box, Heading, Text, IconButton, Image, Button, Spacer, WrapItem, Badge } from '@chakra-ui/react'
 import { BsHeart, BsHeartFill } from 'react-icons/bs';
 import { useState } from "react";
 
@@ -26,12 +26,12 @@ const CardDetails = ({ data }: AllDataType) => {
             <Card maxW='md' bg={'#0b2236'} color='white' fontSize={16} fontWeight='semibold'>
                 <CardHeader>
                     <Flex>
-                        <Button bg='#141b2f' color='white' size='sm'>
+                        <Button bg='#141b2f' color='white' size='sm' rounded='full'>
                             {deal}
                         </Button>
                         <Text size='sm'></Text>
                         <Spacer />
-                        <Button bg='#141b2f' color='white' size='sm' border='2px solid red'>
+                        <Button bg='#141b2f' color='white' size='sm' border='2px solid red' rounded='full'>
                             {action}
                         </Button>
                     </Flex>
@@ -63,8 +63,15 @@ const CardDetails = ({ data }: AllDataType) => {
                         <Text>
                             {
                                 heightBid ?
-                                    <Text align='left' py='3' px='5' border='1px solid #20486d'>HEIGHT BID<br />${heightBid}</Text> :
-                                    <Text align='left' py='3' px='5' border='1px solid #20486d'><Text pr={10} color='red'>${earlierPrice}</Text><Text>${offerPrice}</Text></Text>
+                                    <Text align='left' py='3' px='5' border='1px solid #20486d'>
+                                        <Text color='#00b61b'>HEIGHT BID</Text>
+                                        <Text>${heightBid}</Text>
+                                    </Text> :
+                                    <Text align='left' py='3' px='5' border='1px solid #20486d'>
+                                        <Badge bg='#00b61b' position='absolute' mt='-5' ml='5' rounded='full'>{offer}</Badge>
+                                        <Text pr={10} color='red'>${earlierPrice}</Text>
+                                        <Text>${offerPrice}</Text>
+                                    </Text>
                             }
                         </Text>
                         <Spacer />
