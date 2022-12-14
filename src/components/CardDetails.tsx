@@ -5,18 +5,17 @@ import { useState } from "react";
 
 const CardDetails = ({ data }: AllDataType) => {
     const [like, setLike] = useState(false)
+    let { title, batchNo, img, deal, action, reaction, heightBid, offer, earlierPrice, offerPrice, actionDeadline, saleDeadline } = data
 
-    let { id, title, batchNo, img, deal, action, reaction, heightBid, offer, earlierPrice, offerPrice, actionDeadline, saleDeadline } = data
-
+    const [reactCount, setReactCount] = useState(reaction)
     const handleReaction = () => {
         if (like) {
             setLike(false)
-            reaction = reaction - 1
+            setReactCount(reaction)
 
         } else {
             setLike(true)
-
-            reaction = reaction + 1
+            setReactCount(reaction + 1)
         }
     }
     return (
@@ -44,15 +43,15 @@ const CardDetails = ({ data }: AllDataType) => {
                     <Flex>
                         <Text>
                             {batchNo}<br />
-                            <Text color='#20486d'>{title}</Text>
+                            <Text color='#20486d'> {title}</Text>
                         </Text>
                         <Spacer />
                         <Flex alignItems='center' gap='2'>
-                            <Text onClick={() => { setLike(!like) }}>
+                            <Text onClick={handleReaction}>
                                 {like ? <Text color='red'><BsHeartFill /> </Text> : <BsHeart />}
                             </Text>
                             <Text>
-                                {reaction}
+                                {reactCount}
                             </Text>
                         </Flex>
                     </Flex>
@@ -73,7 +72,7 @@ const CardDetails = ({ data }: AllDataType) => {
                                 <Flex>
                                     <Text align='left' py='3' px='5' border='1px solid #20486d'>
                                         <Badge bg='#00b61b' position='absolute' mt='-5' ml='5' rounded='full'>{offer}</Badge>
-                                        <Text pr={10} color='red'>${earlierPrice}</Text>
+                                        <Text pr={10} color='red'>$<del>{earlierPrice}</del></Text>
                                         <Text>${offerPrice}</Text>
                                     </Text>
                                     <Spacer />
