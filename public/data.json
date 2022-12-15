@@ -7,8 +7,7 @@
         "deal": "Hot Deal",
         "action": "Action",
         "reaction": 92,
-        "heightBid": 260,
-        "actionDeadline": "20-12-22"
+        "heightBid": 260
     },
     {
         "id": 2,
@@ -18,8 +17,7 @@
         "deal": "Hot Deal",
         "action": "Action",
         "reaction": 32,
-        "heightBid": 260,
-        "actionDeadline": "20-12-22"
+        "heightBid": 260
     },
     {
         "id": 3,
@@ -31,7 +29,6 @@
         "reaction": 92,
         "offer": "10% off",
         "earlierPrice": "300",
-        "offerPrice": 260,
-        "saleDeadline": "20-12-22"
+        "offerPrice": 260
     }
 ]

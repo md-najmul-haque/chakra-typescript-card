@@ -2,10 +2,12 @@ import { AllDataType } from "../types/Card.type";
 import { Card, CardHeader, CardBody, Flex, Text, Image, Button, Spacer, WrapItem, Badge } from '@chakra-ui/react'
 import { BsHeart, BsHeartFill } from 'react-icons/bs';
 import { useState } from "react";
+import Countdown from 'react-countdown';
+
 
 const CardDetails = ({ data }: AllDataType) => {
     const [like, setLike] = useState(false)
-    let { title, batchNo, img, deal, action, reaction, heightBid, offer, earlierPrice, offerPrice, actionDeadline, saleDeadline } = data
+    let { title, batchNo, img, deal, action, reaction, heightBid, offer, earlierPrice, offerPrice } = data
 
     const [reactCount, setReactCount] = useState(reaction)
     const handleReaction = () => {
@@ -66,7 +68,10 @@ const CardDetails = ({ data }: AllDataType) => {
                                         <Text>${heightBid}</Text>
                                     </Text>
                                     <Spacer />
-                                    <Text align='left' p='3' border='1px solid #20486d'>ACTION END IN<br />{actionDeadline}</Text>
+                                    <Text align='left' p='3' border='1px solid #20486d'>
+                                        <Text color='#1976d2'>ACTION END IN</Text>
+                                        <Text><Countdown date={Date.now() + 300000000} />s</Text>
+                                    </Text>
                                 </Flex>
                                 :
                                 <Flex>
@@ -76,7 +81,10 @@ const CardDetails = ({ data }: AllDataType) => {
                                         <Text>${offerPrice}</Text>
                                     </Text>
                                     <Spacer />
-                                    <Text align='left' p='3' border='1px solid #20486d'>ACTION END IN<br />{saleDeadline}</Text>
+                                    <Text align='left' p='3' border='1px solid #20486d'>
+                                        <Text color='#1976d2'>ACTION END IN</Text>
+                                        <Text><Countdown date={Date.now() + 300000000} />s</Text>
+                                    </Text>
                                 </Flex>
                         }
                     </Text>

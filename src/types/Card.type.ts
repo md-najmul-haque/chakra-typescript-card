@@ -10,8 +10,6 @@ export type DataType = {
     offer?: string,
     earlierPrice?: number,
     offerPrice?: number,
-    actionDeadline?: string,
-    saleDeadline?: string,
 }
 export type AllDataType = {
     data: {
@@ -25,8 +23,6 @@ export type AllDataType = {
         heightBid?: number,
         offer?: string
         earlierPrice?: number,
-        offerPrice?: number,
-        actionDeadline?: string,
-        saleDeadline?: string,
+        offerPrice?: number
     }
 }
